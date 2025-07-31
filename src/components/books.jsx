@@ -8,6 +8,12 @@ import authservice from "./authservice";
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
+const defaultParams = {
+  q: "Harry Potter",
+  langRestrict: "en",
+  startIndex: 0,
+  maxResults: options.maxResults || 8,
+};
 const Books = (props) => {
   const [data, setData] = useState({});
   const [mybook, setmybook] = useState([]);
@@ -36,12 +42,7 @@ const Books = (props) => {
       console.error("Error fetching Options:", error);
     }
   };
-  const defaultParams = {
-    q: "Harry Potter",
-    langRestrict: "en",
-    startIndex: 0,
-    maxResults: options.maxResults || 8,
-  };
+  
 
   // Build default query string from defaultParams
   useEffect(() => {
