@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import auth from "./authservice";
 
@@ -12,7 +11,7 @@ function Logout() {
     navigate("/");
   }, [navigate]);
 
-  return null; // or just: return <></>;
+  return null;
 }
 
 export default Logout;

@@ -34,9 +34,10 @@ function deleteReq(url) {
   });
 }
 
-export default {
+const httpService={
   get,
   post,
   put,
   deleteReq,
-};
+}
+export default httpService;

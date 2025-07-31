@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import ProtectedRoute from "./protectedRoute.js";
 import MainComponent from "./mainComponents";
 import React from "react";

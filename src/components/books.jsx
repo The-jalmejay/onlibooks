@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
+import {  useNavigate, useLocation } from "react-router-dom";
 import http from "./httpService";
 import LeftOptionPanel from "./leftOptionPanel";
 import "./css/books.css";
@@ -11,7 +11,6 @@ function useQuery() {
 const Books = (props) => {
   const [data, setData] = useState({});
   const [mybook, setmybook] = useState([]);
-  const [loading, setLoading] = useState(true);
   const location = useLocation();
   const [removingBookId, setRemovingBookId] = useState(null);
   const query = useQuery();
@@ -54,7 +53,7 @@ const Books = (props) => {
 
   useEffect(() => {
     fetchOPtion();
-  }, []);
+  }, [defaultParams]);
 
   const fetchOPtion = async () => {
     try {
@@ -103,7 +102,7 @@ const Books = (props) => {
 
   const handleonOptionChange = (options) => {
     options.startIndex = 0;
-    options.maxResults = options.maxResults;
+    options.maxResults = options.maxResults||8;
     callURL("/books", options);
   };
   const callURL = (url, options) => {

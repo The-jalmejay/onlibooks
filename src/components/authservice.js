@@ -62,7 +62,8 @@ function removeToken() {
   localStorage.removeItem(USER_KEY);
 }
 
-export default {
+
+const authService = {
   getToken,
   storeToken,
   removeToken,
@@ -75,3 +76,5 @@ export default {
   storeUser,
   getUser,
 };
+export default authService;
+
