@@ -1,0 +1,27 @@
+.form-check {
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease;
+  }
+  
+  .makeRadioSelected {
+    background-color: rgb(238, 186, 145) !important;
+  }
+
+  .makeRadio:hover {
+    background-color: rgb(238, 186, 145) !important;
+  }
+  
+  
+  .form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+  
+
+
+  .makeRadio {
+    transition: background-color 0.3s ease;
+  }
+  
+

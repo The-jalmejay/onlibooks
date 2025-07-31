@@ -1,0 +1,23 @@
+.mybooks-top {
+    margin-top: 65px;
+    width: 60%
+}
+
+.card-body h6,
+.card-body p {
+    font-size: 0.85rem;
+}
+
+.but {
+    background-color: rgb(238, 186, 145);
+    border-radius: 5px ;
+    border-color: rgb(238, 186, 145);
+    font-weight: bold;
+    padding: 5px 5px;
+    box-shadow: 2px 5px 20px rgb(238, 186, 145);
+}
+
+.but:hover{
+    padding: 5px 10px;
+    box-shadow: 2px 5px 10px rgb(36, 30, 26);
+}

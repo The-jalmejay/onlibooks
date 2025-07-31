@@ -1,0 +1,40 @@
+.logo {
+    width: 100px;
+    padding-top: -10px;
+    padding-bottom: -10px;
+    margin: -20px 0;
+    margin-bottom: -30px;
+}
+
+.there {
+    background-color: rgb(238, 186, 145);
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 5px 20px rgb(238, 186, 145);
+}
+
+.nav-item {
+    margin: 0 10px;
+    padding-left: 5px;
+}
+
+/* .nav-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+.nav-item:hover {
+    background-color: rgb(238, 186, 145);
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 5px 20px rgb(238, 186, 145);
+}
+.nav-link {
+    max-width: 150px;         /* 👈 Adjust as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;    /* required for max-width + ellipsis to work */
+  }
+    

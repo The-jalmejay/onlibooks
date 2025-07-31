@@ -1,0 +1,35 @@
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.custom-bg {
+    background-color: #f4f8ff;
+    /* Light bluish background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-radius: 12px;
+}
+
+.custom-bg:hover {
+    background-color: rgb(238, 186, 145);
+    /* Slightly darker on hover */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.custom-bg img {
+    transition: transform 0.3s ease;
+}
+
+.custom-bg:hover img {
+    transform: scale(1.05);
+}
+.book-top{
+    margin-top: 65px;
+}
