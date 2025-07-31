@@ -19,7 +19,7 @@ const Books = (props) => {
   const navigate = useNavigate();
   const [checkOption, setCheckOption] = useState({});
   const [options, setOptions] = useState({});
-  // const query = searchParams.get("q") || "";
+  const [loading, setLoading] = useState(false);
   const startIndex = +(searchParams.get("startIndex") || 0);
 
   // Fetch Options from  API
@@ -188,6 +188,7 @@ const Books = (props) => {
     orderBy: true,
     maxResults: 8
   };
+  console.log(loading);
   const user = authservice.getUser();
   return (
     <div className="container py-4 book-top">
