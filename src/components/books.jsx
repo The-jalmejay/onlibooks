@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useMemo } from "react";
 import {  useNavigate, useLocation } from "react-router-dom";
 import http from "./httpService";
 import LeftOptionPanel from "./leftOptionPanel";
@@ -8,12 +8,7 @@ import authservice from "./authservice";
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
-const defaultParams = {
-  q: "Harry Potter",
-  langRestrict: "en",
-  startIndex: 0,
-  maxResults: options.maxResults || 8,
-};
+
 const Books = (props) => {
   const [data, setData] = useState({});
   const [mybook, setmybook] = useState([]);
@@ -45,6 +40,14 @@ const Books = (props) => {
   
 
   // Build default query string from defaultParams
+  const defaultParams = useMemo(() => ({
+    q: "Harry Potter",
+    langRestrict: "en",
+    startIndex: 0,
+    maxResults: options.maxResults || 8,
+  }), [options.maxResults]);
+  
+
   useEffect(() => {
     if (!q) {
       const params = new URLSearchParams(defaultParams).toString();
